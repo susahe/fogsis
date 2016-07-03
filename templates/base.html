@@ -7,13 +7,15 @@
 
 
 <head>
-  <title>Bootstrap Example</title>
-  <!-- Title of the Site -->
-    <title>Foundation of Goodnes </title>
+
+    <!-- Title of the Site -->
+    <title>Foundation of Goodnes- Student Information System </title>
     <!-- ================================================================ -->
     <!-- Define meta and Script -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Style Sheets -->
     <!-- ==================================================================  -->
@@ -21,42 +23,39 @@
 
     <!-- Bootstrap -->
     <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.css' %}"/>
-
     <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.css.map' %}"/>
-
     <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap-theme.css' %}"/>
-
     <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap-theme.css.map' %}"/>
     <link rel="stylesheet" href="{% static 'bootstrap/css/morris.css ' %}"/>
     <link rel="stylesheet" href="{% static 'bootstrap/css/sb-admin.css ' %}"/>
+    <link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css'>
+    <link rel="stylesheet" type="text/css" href="{% static 'bootstrap/css/custom.css' %}"/>
+    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
+
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}"/>
+
     <!-- Optional theme -->
+
     <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap-theme.min.css' %}"/>
     <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap-theme.min.css.map' %}"/>
     <!-- Latest compiled and minified JavaScript -->
+
     <!-- Java Scripts -->
     <script src="{% static   'bootstrap/js/bootstrap.min.js' %}" crossorigin="anonymous"></script>
     <script href="{% static 'bootstrap/js/jquery.min.js' %}"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script type="text/javascript" src="{% static 'bootstrap/js/jquery.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
 
-
-    <link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css'>
-    <link rel="stylesheet" type="text/css" href="{% static 'bootstrap/css/custom.css' %}"/>
-
-    <meta charset="utf-8">
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
-  <script type="text/javascript" src="{% static 'bootstrap/js/jquery.min.js' %}"></script>
-  <script type="text/javascript" src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
 </head>
+
+
 <body>
 
 
 <!-- Navigation -->
-<nav class="navbar navbar-light " style=" background-color: #e3f2fd;" role="navigation">
+<nav class="navbar navbar-light " style=" background-color: #f17200; forground-color: #000000;" role="navigation">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
             <a class="navbar-brand" href="index.html">Foundation of Goodness</a>
@@ -69,75 +68,82 @@
           </button>
 
         </div>
-  <ul class="nav navbar-nav navbar-right">
 
-    <li class="active"><a href="#">Home</a></li>
-    <li><a href="#">About</a></li>
-    <li><a href="#">Login</a></li>
-
-    <li class="dropdown">
-    <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Account <span class="caret"></span></a>
-      <ul class="dropdown-menu">
-        <li><a href="#">Account </a></li>
-        <li><a href="#">Profile</a></li>
-        <li><a href="#">Logout</a></li>
+    <ul class="nav navbar-nav navbar-right">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Login</a></li>
+        <li class="dropdown">
+        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Account <span
+                class="caret"></span></a>
+            <ul class="dropdown-menu">
+                <li><a href="#">Account </a></li>
+                <li><a href="#">Profile</a></li>
+                <li><a href="#">Logout</a></li>
+            </ul>
+        </li>
         </ul>
-    </li>
-  </ul>
 
 
 </nav>
 
+<!-- Header -->
+<header></header>
 
+<!-- Section -->
 <section class="bg-primary" id="about">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-8 col-lg-offset-2 text-center">
-        <h2 class="section-heading">Student Information System </h2>
-        <hr class="light">
-        <p class="text-faded">
-          Foundation of Goodness
-        </p>
-
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 text-center">
+                <img src="{%static 'img/foundation-of-goodness.png' %}"/> </br>
+                <img src="{%static 'img/b1lg1.png' %}"/>
+                <h2 class="section-heading">Student Information System </h2>
+                <hr class="light">
 
         <!-- Trigger the modal with a button -->
-        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Login</button>
+                <button type="button" class="btn btn-warning btn-md" data-toggle="modal" data-target="#myModal">Click to
+                    Login
+                </button>
+                <p class="text-faded">
+                    </br>
+                </p>
 
         <!-- Modal -->
-        <div class="modal fade" id="myModal" role="dialog">
-          <div class="modal-dialog modal-sm">
-
+                <div class="modal fade" id="myModal" role="dialog">
+                    <div class="modal-dialog modal-sm">
             <!-- Modal content -->
-            <div class="modal-content">
-              <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h4 class="modal-title">Foundation of Goodness</h4>
-              </div>
-              <div class="modal-body">
-                <form method="post" action='' name="login_form">
-                  <p><input type="text" class="span3" name="eid" id="email" placeholder="Username"></p>
-                  <p><input type="password" class="span3" name="passwd" placeholder="Password"></p>
-                  <p>
-                    <button type="submit" class="btn btn-primary">Sign in</button>
-                    <a href="#">Forgot Password?</a>
-                  </p>
-                </form>
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-              </div>
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <h4 class="modal-title">Foundation of Goodness</h4>
+                                <img src="{%static 'img/foundation-of-goodness.png' %}" width="61" height="75"/>
+                                <img src="{%static 'img/b1lg1.png' %}" height="50"/>
+                            </div>
+                            <div class="modal-body">
+                                <form method="post" action='' name="login_form">
+                                    <p><input type="text" class="span3" name="eid" id="email" placeholder="Username">
+                                    </p>
+                                    <p><input type="password" class="span3" name="passwd" placeholder="Password"></p>
+                                    <p>
+                                        <button type="submit" class="btn btn-primary">Login</button>
+                                        <a href="#">Forgot Password?</a>
+                                    </p>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
             </div>
-
-
-          </div>
-
         </div>
-
-      </div>
     </div>
-  </div>
 </section>
-
 
 {% block body %}
 
@@ -151,7 +157,9 @@
         </div>
     </div>
 </footer>
+
 </body>
+
 </html>
 
 
