@@ -4,15 +4,18 @@
 {%  load staticfiles  %}
 
 <html lang="en">
+
+
 <head>
-    <meta charset="UTF-8">
 
     <!-- Title of the Site -->
-    <title>Foundation of Goodnes </title>
+    <title>Foundation of Goodnes- Student Information System </title>
     <!-- ================================================================ -->
     <!-- Define meta and Script -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Style Sheets -->
     <!-- ==================================================================  -->
@@ -20,246 +23,127 @@
 
     <!-- Bootstrap -->
     <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.css' %}"/>
-
     <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.css.map' %}"/>
-
     <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap-theme.css' %}"/>
-
     <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap-theme.css.map' %}"/>
+    <link rel="stylesheet" href="{% static 'bootstrap/css/morris.css ' %}"/>
+    <link rel="stylesheet" href="{% static 'bootstrap/css/sb-admin.css ' %}"/>
+    <link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css'>
+    <link rel="stylesheet" type="text/css" href="{% static 'bootstrap/css/custom.css' %}"/>
+    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
 
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}"/>
+
     <!-- Optional theme -->
+
     <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap-theme.min.css' %}"/>
     <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap-theme.min.css.map' %}"/>
     <!-- Latest compiled and minified JavaScript -->
+
     <!-- Java Scripts -->
     <script src="{% static   'bootstrap/js/bootstrap.min.js' %}" crossorigin="anonymous"></script>
     <script href="{% static 'bootstrap/js/jquery.min.js' %}"></script>
-
-
-    <link rel="stylesheet" type="text/css" href="{% static 'bootstrap/css/custom.css' %}"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script type="text/javascript" src="{% static 'bootstrap/js/jquery.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
 
 </head>
 
+
 <body>
 
-<!-- Header -->
-<!-- Navigration Bar -->
-<nav class="navbar navbar-default navbar-fixed-top topnav" role="navigation">
-    <div class="container topnav">
+
+<!-- Navigation -->
+<nav class="navbar navbar-light " style=" background-color: #f17200; forground-color: #000000;" role="navigation">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse"
+            <a class="navbar-brand" href="index.html">Foundation of Goodness</a>
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
                     data-target="#bs-example-navbar-collapse-1">
                 <span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand topnav" href="#">Start Bootstrap</a>
+
         </div>
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav navbar-right">
-                <li>
-                    <a href="#about">About</a>
-                </li>
-                <li>
-                    <a href="#services">Services</a>
-                </li>
-                <li>
-                    <a href="#contact">Contact</a>
-                </li>
+
+    <ul class="nav navbar-nav navbar-right">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Login</a></li>
+        <li class="dropdown">
+        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Account <span
+                class="caret"></span></a>
+            <ul class="dropdown-menu">
+                <li><a href="#">Account </a></li>
+                <li><a href="#">Profile</a></li>
+                <li><a href="#">Logout</a></li>
             </ul>
-        </div>
-        <!-- /.navbar-collapse -->
-    </div>
-    <!-- /.container -->
+        </li>
+    </ul>
+
+
 </nav>
 
-
 <!-- Header -->
-<a name="about"></a>
-<div class="intro-header">
-    <div class="container">
+<header></header>
 
+<!-- Section -->
+<section class="bg-primary" id="about">
+    <div class="container">
         <div class="row">
-            <div class="col-lg-12">
-                <div class="intro-message">
-                    <h1>Landing Page</h1>
-                    <h3>A Template by Start Bootstrap</h3>
-                    <hr class="intro-divider">
-                    <ul class="list-inline intro-social-buttons">
-                        <li>
-                            <a href="https://twitter.com/SBootstrap" class="btn btn-default btn-lg"><i
-                                    class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
-                        </li>
-                        <li>
-                            <a href="https://github.com/IronSummitMedia/startbootstrap"
-                               class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span
-                                    class="network-name">Github</span></a>
-                        </li>
-                        <li>
-                            <a href="#" class="btn btn-default btn-lg"><i class="fa fa-linkedin fa-fw"></i> <span
-                                    class="network-name">Linkedin</span></a>
-                        </li>
-                    </ul>
+            <div class="col-lg-8 col-lg-offset-2 text-center">
+                <img src="{%static 'img/foundation-of-goodness.png' %}"/> </br>
+                <img src="{%static 'img/b1lg1.png' %}"/>
+                <h2 class="section-heading">Student Information System </h2>
+                <hr class="light">
+
+                <!-- Trigger the modal with a button -->
+                <button type="button" class="btn btn-warning btn-md" data-toggle="modal" data-target="#myModal">Click to
+                    Login
+                </button>
+                <p class="text-faded">
+                    </br>
+                </p>
+
+                <!-- Modal -->
+                <div class="modal fade" id="myModal" role="dialog">
+                    <div class="modal-dialog modal-sm">
+                        <!-- Modal content -->
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <h4 class="modal-title">Foundation of Goodness</h4>
+                                <img src="{%static 'img/foundation-of-goodness.png' %}" width="61" height="75"/>
+                                <img src="{%static 'img/b1lg1.png' %}" height="50"/>
+                            </div>
+                            <div class="modal-body">
+                                <form method="post" action='' name="login_form">
+                                    <p><input type="text" class="span3" name="eid" id="email" placeholder="Username">
+                                    </p>
+                                    <p><input type="password" class="span3" name="passwd" placeholder="Password"></p>
+                                    <p>
+                                        <button type="submit" class="btn btn-primary">Login</button>
+                                        <a href="#">Forgot Password?</a>
+                                    </p>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+
+                            </div>
+                        </div>
+
+                    </div>
+
                 </div>
             </div>
         </div>
-
     </div>
-    <!-- /.container -->
-
-</div>
-<!-- /.intro-header -->
-
-<!-- Page Content -->
-
-<a name="services"></a>
-<div class="content-section-a">
-
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-5 col-sm-6">
-                <hr class="section-heading-spacer">
-                <div class="clearfix"></div>
-                <h2 class="section-heading">Death to the Stock Photo:<br>Special Thanks</h2>
-                <p class="lead">A special thanks to <a target="_blank" href="http://join.deathtothestockphoto.com/">Death
-                    to the Stock Photo</a> for providing the photographs that you see in this template. Visit their
-                    website to become a member.</p>
-            </div>
-            <div class="col-lg-5 col-lg-offset-2 col-sm-6">
-                <img class="img-responsive" src="img/ipad.png" alt="">
-            </div>
-        </div>
-
-    </div>
-    <!-- /.container -->
-
-</div>
-<!-- /.content-section-a -->
-
-<div class="content-section-b">
-
-    <div class="container">
-
-        <div class="row">
-            <div class="col-lg-5 col-lg-offset-1 col-sm-push-6  col-sm-6">
-                <hr class="section-heading-spacer">
-                <div class="clearfix"></div>
-                <h2 class="section-heading">3D Device Mockups<br>by PSDCovers</h2>
-                <p class="lead">Turn your 2D designs into high quality, 3D product shots in seconds using free Photoshop
-                    actions by <a target="_blank" href="http://www.psdcovers.com/">PSDCovers</a>! Visit their website to
-                    download some of their awesome, free photoshop actions!</p>
-            </div>
-            <div class="col-lg-5 col-sm-pull-6  col-sm-6">
-                <img class="img-responsive" src="img/dog.png" alt="">
-            </div>
-        </div>
-
-    </div>
-    <!-- /.container -->
-
-</div>
-<!-- /.content-section-b -->
-
-<div class="content-section-a">
-
-    <div class="container">
-
-        <div class="row">
-            <div class="col-lg-5 col-sm-6">
-                <hr class="section-heading-spacer">
-                <div class="clearfix"></div>
-                <h2 class="section-heading">Google Web Fonts and<br>Font Awesome Icons</h2>
-                <p class="lead">This template features the 'Lato' font, part of the <a target="_blank"
-                                                                                       href="http://www.google.com/fonts">Google
-                    Web Font library</a>, as well as <a target="_blank" href="http://fontawesome.io">icons from Font
-                    Awesome</a>.</p>
-            </div>
-            <div class="col-lg-5 col-lg-offset-2 col-sm-6">
-                <img class="img-responsive" src="img/phones.png" alt="">
-            </div>
-        </div>
-
-    </div>
-    <!-- /.container -->
-
-</div>
-<!-- /.content-section-a -->
-
-<a name="contact"></a>
-<div class="banner">
-
-    <div class="container">
-
-        <div class="row">
-            <div class="col-lg-6">
-                <h2>Connect to Start Bootstrap:</h2>
-            </div>
-            <div class="col-lg-6">
-                <ul class="list-inline banner-social-buttons">
-                    <li>
-                        <a href="https://twitter.com/SBootstrap" class="btn btn-default btn-lg"><i
-                                class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
-                    </li>
-                    <li>
-                        <a href="https://github.com/IronSummitMedia/startbootstrap" class="btn btn-default btn-lg"><i
-                                class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
-                    </li>
-                    <li>
-                        <a href="#" class="btn btn-default btn-lg"><i class="fa fa-linkedin fa-fw"></i> <span
-                                class="network-name">Linkedin</span></a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-
-    </div>
-    <!-- /.container -->
-
-</div>
-<!-- /.banner -->
-
-<!-- Footer -->
-<footer>
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <ul class="list-inline">
-                    <li>
-                        <a href="#">Home</a>
-                    </li>
-                    <li class="footer-menu-divider">&sdot;</li>
-                    <li>
-                        <a href="#about">About</a>
-                    </li>
-                    <li class="footer-menu-divider">&sdot;</li>
-                    <li>
-                        <a href="#services">Services</a>
-                    </li>
-                    <li class="footer-menu-divider">&sdot;</li>
-                    <li>
-                        <a href="#contact">Contact</a>
-                    </li>
-                </ul>
-                <p class="copyright text-muted small">Copyright &copy; Your Company 2014. All Rights Reserved</p>
-            </div>
-        </div>
-    </div>
-</footer>
-
-<!-- jQuery -->
-<script src="js/jquery.js"></script>
-
-<!-- Bootstrap Core JavaScript -->
-<script src="js/bootstrap.min.js"></script>
-
-
-<!-- Navigration Bar Close Here -->
-
+</section>
 
 {% block body %}
 
@@ -274,8 +158,9 @@
     </div>
 </footer>
 
-</div>
-
-
 </body>
+
 </html>
+
+
+
