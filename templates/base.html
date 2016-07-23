@@ -28,7 +28,7 @@
     <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap-theme.css.map' %}"/>
     <link rel="stylesheet" href="{% static 'bootstrap/css/morris.css ' %}"/>
     <link rel="stylesheet" href="{% static 'bootstrap/css/sb-admin.css ' %}"/>
-    <link rel='stylesheet prefetch' href='http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css'>
+    <link rel='stylesheet prefetch' href="{% static 'bootstrap/fonts/font-awesome.min.css' %}"/>
     <link rel="stylesheet" type="text/css" href="{% static 'bootstrap/css/custom.css' %}"/>
     <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
 
@@ -43,8 +43,7 @@
 
     <!-- Java Scripts -->
     <script src="{% static   'bootstrap/js/bootstrap.min.js' %}" crossorigin="anonymous"></script>
-    <script href="{% static 'bootstrap/js/jquery.min.js' %}"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="{% static 'bootstrap/js/jquery.min.js' %}"></script>
     <script type="text/javascript" src="{% static 'bootstrap/js/jquery.min.js' %}"></script>
     <script type="text/javascript" src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
 
@@ -72,7 +71,7 @@
     <ul class="nav navbar-nav navbar-right">
         <li class="active"><a href="#">Home</a></li>
         <li><a href="#">About</a></li>
-        <li><a href="#">Login</a></li>
+        <li><a href="{% url 'dashboard:login' %}">Login</a></li>
         <li class="dropdown">
         <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Account <span
                 class="caret"></span></a>
@@ -95,7 +94,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 text-center">
-                <img src="{%static 'img/foundation-of-goodness.png' %}"/> </br>
+                <img src="{%static 'img/foundation-of-goodness.png' %}"/> <br>
                 <img src="{%static 'img/b1lg1.png' %}"/>
                 <h2 class="section-heading">Student Information System </h2>
                 <hr class="light">
@@ -105,7 +104,7 @@
                     Login
                 </button>
                 <p class="text-faded">
-                    </br>
+                    <br>
                 </p>
 
                 <!-- Modal -->
@@ -120,15 +119,11 @@
                                 <img src="{%static 'img/b1lg1.png' %}" height="50"/>
                             </div>
                             <div class="modal-body">
-                                <form method="post" action='' name="login_form">
-                                    <p><input type="text" class="span3" name="eid" id="email" placeholder="Username">
-                                    </p>
-                                    <p><input type="password" class="span3" name="passwd" placeholder="Password"></p>
-                                    <p>
-                                        <button type="submit" class="btn btn-primary">Login</button>
-                                        <a href="#">Forgot Password?</a>
-                                    </p>
-                                </form>
+
+                                {% block body %}
+
+                                {% endblock %}
+
                             </div>
                             <div class="modal-footer">
 
@@ -145,9 +140,7 @@
     </div>
 </section>
 
-{% block body %}
 
-{% endblock %}
 
 <!-- Footer -->
 <footer>
