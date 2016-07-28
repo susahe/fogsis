@@ -16,6 +16,6 @@ urlpatterns = [
     # url(r'^course/(?P<pk>[0-9]+)/delete/$', views.CourseDelete.as_view(), name='course-delete'),
     # url(r'^register/$', views.UserFormView.as_view(), name='register'),
     url(r'^accounts/login/$', views.LoginView.as_view(), name='login'),
-    #  url(r'^accounts/logout/$', views.LogOutView.as_view(), name='logout'),
+    url(r'^accounts/logout/$', views.LogOutView.as_view(), name='logout'),
 
 ]
