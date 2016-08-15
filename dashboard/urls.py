@@ -7,7 +7,7 @@ app_name = 'dashboard'
 urlpatterns = [
 
     # url(r'^$', views.index , name = 'index'),
-    url(r'^$', views.HomePageView.as_view(), name='home'),
+    url(r'^$', views.HomePageView.as_view(), name='index'),
     # url(r'^(?P<pk>[0-9]+)/$', views.DetailView.as_view(), name='details'),
     # # url(r'^(?P<course_id>[0-9]+)/favorite/$', views.favorite, name='favorite'),
     # url(r'^course/add/$', views.CourseCreate.as_view(), name='course-add'),

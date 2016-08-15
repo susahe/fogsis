@@ -57,7 +57,7 @@
 <nav class="navbar navbar-light " style=" background-color: #f17200; forground-color: #000000;" role="navigation">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
-            <a class="navbar-brand" href="index.html">Foundation of Goodness</a>
+            <a class="navbar-brand" href="{% url 'dashboard:index' %}">Foundation of Goodness</a>
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
                     data-target="#bs-example-navbar-collapse-1">
                 <span class="sr-only">Toggle navigation</span>
@@ -71,21 +71,21 @@
     <ul class="nav navbar-nav navbar-right">
         <!-- authentciating only show follwing -->
         {% if not user.is_authenticated %}
-        <li class="active"><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
+        <li class="active"><a href="{% url 'dashboard:index' %}">Home</a></li>
+
+        <li><a href="{% url 'dashboard:login' %}">login</a></li>
+        {% else %}
+
+
         <li class="dropdown">
         <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Account <span
                 class="caret"></span></a>
             <ul class="dropdown-menu">
-                <li><a href="#">Account </a></li>
-                <li><a href="#">Profile</a></li>
-                <li><a href="#">Logout</a></li>
+
+                <li><a href="">Profile</a></li>
+                <li><a href="{% url 'dashboard:logout' %}">logout</a></li>
             </ul>
         </li>
-        {% else %}
-
-        <li><a href="{% url 'dashboard:login' %}">Login</a></li>
-
         {% endif %}
     </ul>
 
@@ -96,54 +96,7 @@
 <header></header>-->
 
 <!-- Section -->
-<section class="bg-primary" id="about">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 text-center">
-                <img src="{%static 'img/foundation-of-goodness.png' %}"/> <br>
-                <img src="{%static 'img/b1lg1.png' %}"/>
-                <h2 class="section-heading">Student Information System </h2>
-                <hr class="light">
-                <img src="{%static 'img/ayubowan.png' %}" width="60" height="60"/>
 
-                <!-- Trigger the modal with a button -->
-                <!--  <button type="button" class="btn btn-warning btn-md" data-toggle="modal" data-target="#myModal">Click to
-                      Login
-                  </button>
-                  <p class="text-faded">
-                      <br>
-                  </p>-->
-
-                <!-- Modal -->
-                <!-- <div class="modal fade" id="myModal" role="dialog">
-                     <div class="modal-dialog modal-sm">
-                         &lt;!&ndash; Modal content &ndash;&gt;
-                         <div class="modal-content">
-                             <div class="modal-header">
-                                 <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                 <h4 class="modal-title">Foundation of Goodness</h4>
-                                 <img src="{%static 'img/foundation-of-goodness.png' %}" width="61" height="75"/>
-                                 <img src="{%static 'img/b1lg1.png' %}" height="50"/>
-                             </div>
-                             <div class="modal-body">
-
-
-
-                             </div>
-                             <div class="modal-footer">
-
-                                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-
-                             </div>
-                         </div>
-
-                     </div>-->
-
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
 
 {% block login %}
 
