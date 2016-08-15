@@ -19,7 +19,7 @@ from django.views.generic import TemplateView
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^$', TemplateView.as_view(template_name="base.html")),
+    url(r'^$', TemplateView.as_view(template_name="dashboard/index.html")),
     url(r'^dashboard/', include('dashboard.urls')),
 ]
 
