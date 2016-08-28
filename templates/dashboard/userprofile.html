@@ -2,8 +2,25 @@
 {%  load staticfiles  %}
 
 {% load crispy_forms_tags %}
-{% block login %}
 
+
+{% block userprofile %}
+
+<!-- <img src="bird.jpg" class="img-circle" alt="Bird"> -->
+<li class="dropdown">
+<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Account
+    <span class="caret"> </span></a>
+    <ul class="dropdown-menu">
+        <li><img src="{{user.user_picture }}" class="img-circle"/> {{user.username}}</li>
+        <li class='divider'></li>
+        <li><a href='#'>Edit Profile</a></li>
+        <li class='divider'></li>
+        <li><a href="{% url 'dashboard:logout' %}">logout</a></li>
+    </ul>
+</li>
+
+{% endblock %}
+{% block login %}
 
 <section class="bg-primary" id="about">
     <div class="container">
@@ -13,9 +30,6 @@
                 <img src="{%static 'img/b1lg1.png' %}"/>
                 <h2 class="section-heading">Student Information System </h2>
                 <hr class="light">
-                <img src="{%static 'img/ayubowan.png' %}" width="60" height="60"/>
-                {{user.username}} {{user.email}} {{user.first_name}}<img src="{{user.user_picture }}"/>
-
                 <!-- Trigger the modal with a button -->
                 <!--  <button type="button" class="btn btn-warning btn-md" data-toggle="modal" data-target="#myModal">Click to
                       Login
