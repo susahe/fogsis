@@ -10,24 +10,34 @@
 <section class="bg-primary" id="about">
     <div class="container">
         <div class="row">
-            <div class="col-sm-6 col-md-4 col-md-offset-4">
+            <div class="col-sm-3 col-md-2 col-md-offset-4">
+                <div class="signin-row row">
+                    <div class="span8">FOG System</div>
+                    <div class="span6">
+                        <div class="well well-small well-shadow">
+                            <legend class="lead">Login Page</legend>
+                            {% crispy form %}
+                        </div>
 
-
-
-                <h3 class="section-heading">Student Information System </h3>
-                <div class="account-wall">
+                    </div>
                 </div>
-                <h1>Login Page </h1>
-                    {% crispy form %}
+                <div class="span8">
+                    Welcome to Login page
+                </div>
+            </div>
+
+
+
+                </div>
 
             </div>
 
 
         </div>
     </div>
-    <div>
 
-    </div>
+
 </section>
+
 
 {% endblock %}
