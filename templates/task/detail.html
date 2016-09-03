@@ -24,7 +24,20 @@
 </div>
 
 
+<form action="" method="post">
+    {% csrf_token %}
+    {% for module in course.module_set.all %}
 
+    <input type="radio" id="module{{ forloop.counter }}" name="module" value="{{ module.id }}"/>
+    <label for="module{{ forloop.counter }}">
+        {{ module.name }}
+        {% if module.is_favorite %}
+        <img src="http://i.imgur.com/b9b1erd.png"/>
+        {% endif %}
+    </label><br/>
+    {% endfor %}
+    <input type="submit" value="favorite">
+</form>
 
 
 {% endblock %}
