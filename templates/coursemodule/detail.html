@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{%  load staticfiles  %}
+
+{% block body %}
+
+<li><a href="{% url 'course:coursemodule-add' %}"><span class="glyphicon glyphicon-login"></span>Module Add </a></li>
+
+{%  if error_messge  %}
+<p><strong> {{ error_messge }}</strong></p>
+{% endif %}
+<div class="col-lg-3 col-md-4 col-xs-6 thumb">
+    <a class="thumbnail" href="{% url 'course:details' course.id %}">
+        <img class="img-responsive" src=" /media/{{course.course_logo}}" alt=""> </a>
+    <h4><a href="{% url 'course:details' course.id %}">{{course.name}} </a></h4>
+    <h2> {{course.code}}</h2>
+    <h2> {{course.fees}}</h2>
+    <h2> {{course.theory_hrs}}</h2>
+    <h2> {{course.practical_hrs}}</h2>
+    <h2> {{course.course_creator}}</h2>
+    <h2> {{course.created_at}}</h2>
+    <h2> {{course.updated_at}} </h2>
+
+
+</div>
+
+
+<form action="" method="post">
+    {% csrf_token %}
+    {% for module in course.module_set.all %}
+
+    <input type="radio" id="module{{ forloop.counter }}" name="module" value="{{ module.id }}"/>
+    <label for="module{{ forloop.counter }}">
+        {{ module.name }}
+        {% if module.is_favorite %}
+        <img src="http://i.imgur.com/b9b1erd.png"/>
+        {% endif %}
+    </label><br/>
+    {% endfor %}
+    <input type="submit" value="favorite">
+</form>
+
+
+{% endblock %}

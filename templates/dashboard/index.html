@@ -2,6 +2,10 @@
 {%  load staticfiles  %}
 
 {% load crispy_forms_tags %}
+
+{% block userprofile %}
+
+<li><a href="{% url 'course:course_list' %}"> Course</a></li>        {% endblock %}
 {% block login %}
 
 
