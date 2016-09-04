@@ -3,23 +3,33 @@
 
 {% load crispy_forms_tags %}
 
+
 {% block userprofile %}
+<!-- <img src="bird.jpg" class="img-circle" alt="Bird"> -->
+<li class="dropdown">
+<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Account
+    <span class="caret"> </span></a>
+    <ul class="dropdown-menu">
+        <li><img src="{{user.user_picture }}" class="img-circle"/> {{user.username}}</li>
+        <li class='divider'></li>
+        <li><a href='#'>Edit Profile</a></li>
+        <li class='divider'></li>
+        <li><a href="{% url 'dashboard:logout' %}">logout</a></li>
+    </ul>
+</li>
 
-<li><a href="{% url 'course:course_list' %}"> Course</a></li>        {% endblock %}
+{% endblock %}
 {% block login %}
-
 
 <section class="bg-primary" id="about">
     <div class="container">
-        <div class="row" style="height:70%;">
+        <div class="row">
             <div class="col-lg-8 col-lg-offset-2 text-center">
                 <img src="{%static 'img/foundation-of-goodness.png' %}"/> <br>
                 <img src="{%static 'img/b1lg1.png' %}"/>
                 <h2 class="section-heading">Student Information System </h2>
                 <hr class="light">
-
-
-                <!-- Trigger the modal with a button <img src="{%static 'img/ayubowan.png' %}" width="60" height="60"/>-->
+                <!-- Trigger the modal with a button -->
                 <!--  <button type="button" class="btn btn-warning btn-md" data-toggle="modal" data-target="#myModal">Click to
                       Login
                   </button>

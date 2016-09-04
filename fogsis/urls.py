@@ -26,6 +26,7 @@ urlpatterns = [
     url(r'^$', TemplateView.as_view(template_name="dashboard/index.html")),
     url(r'^dashboard/', include('dashboard.urls')),
     url(r'^course/', include('course.urls')),
+    url(r'^payment/', include('payment.urls')),
     url(r'^media/(?P<path>.*)$', serve, {
         'document_root': settings.MEDIA_ROOT,
     }),
