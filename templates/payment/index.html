@@ -5,7 +5,7 @@
 
 {% block userprofile %}
 
-<li><a href="{% url 'course:course_list' %}"> Course</a></li>        {% endblock %}
+{% endblock %}
 {% block login %}
 
 
@@ -13,11 +13,11 @@
     <div class="container">
         <div class="row" style="height:70%;">
             <div class="col-lg-8 col-lg-offset-2 text-center">
-                <img src="{%static 'img/foundation-of-goodness.png' %}"/> <br>
-                <img src="{%static 'img/b1lg1.png' %}"/>
-                <h2 class="section-heading">Student Information System </h2>
-                <hr class="light">
 
+                <h2 class="section-heading">Payment </h2>
+                <hr class="light">
+                <button> Add Payment</button>
+                <button> Delete Payment</button>
 
                 <!-- Trigger the modal with a button <img src="{%static 'img/ayubowan.png' %}" width="60" height="60"/>-->
                 <!--  <button type="button" class="btn btn-warning btn-md" data-toggle="modal" data-target="#myModal">Click to
